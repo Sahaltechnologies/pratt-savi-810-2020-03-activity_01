@@ -13,4 +13,4 @@ This program should;
 7. Sum the population in Buffer
 8. Print maps of the geocoded address, tract boundaries and buffers. 
 
-
+![map](https://github.com/pratt-savi-810/pratt-savi-810-2020-03-activity_01/blob/master/maps/_examples/map_0_int_tract_pop.png?raw=true)
