@@ -11,4 +11,7 @@ def get_state_ids(
 
     # spatial join to get associate state ids with address points
 
+    pd.read_csv(some_csv)
+
     return points_sj_states
+
