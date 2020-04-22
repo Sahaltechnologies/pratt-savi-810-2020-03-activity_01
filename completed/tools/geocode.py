@@ -10,8 +10,6 @@ def geocode_dataframe(address_dataframe, address_column):
     df = address_dataframe.copy()
     df['geocode'] = df[address_column].apply(geolocator.geocode)
 
-    print(df.head())
-
     df['geometry'] = df['geocode'].apply(
         lambda x: Point(x.longitude, x.latitude)
     )  # create a geometry column
