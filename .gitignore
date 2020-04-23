@@ -1,3 +1,5 @@
+.idea/ # this will hide all gitignore files
+
 completed/data/processing/data/input/census
 completed/data/processing/
 
