@@ -2,9 +2,15 @@ import matplotlib.pyplot as plt
 import contextily as ctx
 
 
-def create_map(point, buffer_pol, buffer_int, tracts, index):
+def create_map(
+        point,
+        buffer_pol,
+        buffer_int,
+        tracts,
+        index,
+        maps_dir='../maps',  # or try '/maps'
+):
     fig, ax = plt.subplots(figsize=(12, 12))
-
 
     # plot buffer_pol
 
@@ -29,4 +35,4 @@ def create_map(point, buffer_pol, buffer_int, tracts, index):
 
     ax.axis('off')  # turn off x, y axis lines
 
-    plt.savefig(f'maps/map_{index}_int_tract_pop.png')
+    plt.savefig(f'{maps_dir}/map_{index}_int_tract_pop.png')
