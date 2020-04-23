@@ -12,5 +12,11 @@ def get_census_tracts(geoid, download_directory):
 
     # download the file from the download url
 
-    # unzip the file to saved_file 
-    
+    # Good resource, check the second solution in first response
+    # https://stackoverflow.com/questions/7243750/download-file-from-web-in-python-3
+    # using urllib.request.urlretrieve
+
+    # unzip the file to saved_file
+
+    # Good resource here:
+    # https://stackoverflow.com/questions/3451111/unzipping-files-in-python
