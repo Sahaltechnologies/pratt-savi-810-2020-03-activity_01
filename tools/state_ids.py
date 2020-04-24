@@ -10,7 +10,7 @@ def get_state_ids(
 
 
     # read states_geojson file (crs -> epsg:4326)
-    states_gdf = gpd.read_file(states_geojson)[['STATEFP', 'STUSPS', 'NAME', 'geometry']]
+    states_gdf = gpd.read_file(states_geojson)[['GEOID', 'STUSPS', 'NAME', 'geometry']]
 
     # matching both gdf's crs just in case
     geodataframe_points.to_crs(states_gdf.crs, inplace=True)
