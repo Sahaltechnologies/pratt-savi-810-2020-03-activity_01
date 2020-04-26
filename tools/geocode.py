@@ -24,6 +24,6 @@ def geocode_dataframe(address_dataframe, address_column):
     gdf = GeoDataFrame(df, geometry='geometry', crs='epsg:4326')
 
     # drop the geocode column from the gdf
-    gdf.drop(['geocode'], axis=1)
+    gdf = gdf.drop(['geocode'], axis=1)
 
     return gdf
