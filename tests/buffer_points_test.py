@@ -2,7 +2,7 @@ from tools.buffer_points import buffer_addresses
 import geopandas as gpd
 
 
-point_gdf = gpd.read_file('data/input/address_geocodes.shp')
+point_gdf = gpd.read_file('data/input/census_api/address_geocodes.shp')
 
 buffer_distance = 5000
 
