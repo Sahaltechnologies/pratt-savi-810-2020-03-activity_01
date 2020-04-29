@@ -13,4 +13,3 @@ def get_census_tracts(geoid, download_directory):
     # download the file from the download url
 
     # unzip the file to saved_file 
-    
