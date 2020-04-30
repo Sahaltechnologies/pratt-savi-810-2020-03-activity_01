@@ -51,6 +51,7 @@ def main(
         )
 
     for index, row in buffer_gdf.iterrows():
+        # returns two objects
         tracts_file = gpd.read_file(
             f"data/processing/tl_2019_{row['GEOID']}_tract_pop.shp"
         )
@@ -73,6 +74,7 @@ def main(
         )
 
         create_map(point, buffer, gdf_int, tracts_file, index)
+        # this is called each time within the loop
 
 
 if __name__ == '__main__':
