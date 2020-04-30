@@ -20,7 +20,6 @@ def main(
     gdf = geocode_dataframe(df, address_column)
 
     gdf = get_state_ids(gdf)
-    gdf = get_state_ids(gdf)
     for state_id in gdf[state_id_column].unique():
         get_census_tracts(state_id, 'data/input/census')
 
