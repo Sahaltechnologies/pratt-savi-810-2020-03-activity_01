@@ -8,7 +8,6 @@ matplotlib.rcParams['font.sans-serif'] = "Open Sans"
 
 
 # create_map(point, buffer, gdf_int, tracts_file, index)
-
 def create_map(
         point,
         buffer_pol,
@@ -23,7 +22,6 @@ def create_map(
     fig, ax = plt.subplots(figsize=(12, 12))
 
     # plot tracts
-    # tracts=tract.plot(  # do these variables or arguments need to be named?
     tracts.plot(
         ax=ax,
         facecolor='white',
@@ -31,24 +29,13 @@ def create_map(
         linewidth=.25,
         alpha=.5,
     )
-    # buffer_pol.plot( # we don't really need to plot this, it's there with the buffer_int file
-    # ax=ax,
-    # facecolor="none",
-    # edgecolor="red",
-    # linewidth=2,
-    # alpha=.6,
-    # )
-    # plot buffer_int
     buffer_int.plot(
         ax=ax,
         facecolor="orange",
         edgecolor='white',
         lw=.5,
         alpha=.8,
-        # legend=True,
-        # legend_kwds={'title': 'pop_est'}
     )
-    # plot point - be sure that it's using epsg=3857
     point.plot(
         ax=ax,
         markersize=200,
@@ -63,7 +50,6 @@ def create_map(
 
     population = buffer_int['pop_est'].sum().astype('int64')
     # add proportional sum of population for tracts in buffer int for buffer circle
-    # population = population.astype('int64') to give a round number instead of a float
     plt.title(f'{point["address"][index]} - Population: {population}', fontsize=14)  # add title
 
     ctx.add_basemap(
