@@ -24,7 +24,5 @@ def get_state_ids(
                             # points are within the states
     )
 
-    pd.read_csv(some_csv)
-
     return points_sj_states
 
