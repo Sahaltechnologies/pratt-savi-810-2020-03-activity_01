@@ -142,3 +142,7 @@ dmypy.json
 .idea/misc.xml
 .idea/dictionaries/danielmsheehan.xml
 .idea/pratt-savi-810-2020-03-activity_01.iml
+data/processing/_examples/
+
+*.pyc
+*.pyc
