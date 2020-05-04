@@ -19,9 +19,11 @@ def main(
 
     gdf = geocode_dataframe(df, address_column)
 
+    gdf.to_file('data/input/address_geocodes.shp')
+
     gdf = get_state_ids(gdf)
-    # for state_id in gdf[state_id_column].unique():
-    #     get_census_tracts(state_id, 'data/input/census')
+    for state_id in gdf[state_id_column].unique():
+        get_census_tracts(state_id, 'data/input/census')
 
     buffer_gdf = buffer_addresses(gdf, buffer_distance)
     buffer_gdf[['address', 'GEOID', 'geometry']].to_file(
@@ -68,14 +70,12 @@ def main(
         gdf_int['pct_orig_area'] = gdf_int['int_area'] / gdf_int['orig_area']
         gdf_int['pop_est'] = gdf_int['pct_orig_area'] * gdf_int['B01003_001']
 
-        print(index, row)
-
         gdf_int.to_file(
             f'data/processing/intersects/idx_{index}_int_tract_pop.shp'
         )
 
         create_map(point, buffer, gdf_int, tracts_file, index)
-        # this is called each time within the loop
+        # create_map(point, buffer, gdf_int, tracts_file, index)
 
 
 if __name__ == '__main__':
