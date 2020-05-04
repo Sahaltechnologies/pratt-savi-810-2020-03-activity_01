@@ -1,13 +1,14 @@
 .idea/ # this will hide all gitignore files
 .idea/
-
 .idea2/
 
 
 completed/data/processing/data/input/census
 completed/data/processing/
 
+
 data/processing/data/input/census
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

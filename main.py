@@ -73,6 +73,7 @@ def main(
         )
 
         create_map(point, buffer, gdf_int, tracts_file, index)
+        # this is called each time within the loop
 
 
 if __name__ == '__main__':
