@@ -1,3 +1,4 @@
+.idea/ # this will hide all gitignore files
 .idea/
 .idea2/
 
@@ -5,6 +6,8 @@
 completed/data/processing/data/input/census
 completed/data/processing/
 
+
+data/processing/data/input/census
 
 
 # Byte-compiled / optimized / DLL files
@@ -136,3 +139,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/misc.xml
+.idea/dictionaries/danielmsheehan.xml
+.idea/pratt-savi-810-2020-03-activity_01.iml
