@@ -34,12 +34,12 @@ def create_map(point, buffer, buffer_int, tracts, index):
     ax.set_xlim(buffer.bounds['minx'][index], buffer.bounds['maxx'][index])
     ax.set_ylim(buffer.bounds['miny'][index], buffer.bounds['maxy'][index])
 
-    population = buffer_int['pop_est'].sum()
-    plt.title(f'{buffer_int["address"][index]} - Population: {population:,.0f}')
+    population = buffer_int['pop_est'].sum().astype('int64')
+    plt.title(f'{point["address"][index]} - Population: {population}')
 
     ctx.add_basemap(
         ax,
-        url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+        source='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
     )
 
     ax.axis('off')
