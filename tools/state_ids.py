@@ -5,9 +5,7 @@ def get_state_ids(
         geodataframe_points,
         states_geojson='data/input/states.json',
 ):
-    # geodataframe_points is already a GeoDataFrame
-    # states_gepjson is from: https://raw.githubusercontent.com/loganpowell/census-geojson/master/GeoJSON/5m/2018/state.json
-
+    # states_gepjson_url = 'https://raw.githubusercontent.com/loganpowell/census-geojson/master/GeoJSON/5m/2018/state.json'
 
     # read states_geojson file (crs -> epsg:4326)
     states_gdf = gpd.read_file(states_geojson)[['GEOID', 'STUSPS', 'NAME', 'geometry']]
